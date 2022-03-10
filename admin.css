@@ -1,0 +1,253 @@
+.box-1{
+  margin-left:10px;
+  margin-right:10px;
+  background-color:lightblue;
+}
+.grid-1{
+  display:grid;
+  grid-template-columns:1fr 5fr;
+}
+.grid-1.1{
+  grid-row:1;
+  grid-column:1;
+}
+.grid-1.2{
+  grid-row:1;
+  grid-column:2;
+}
+.flex-1-1{
+display:flex;
+flex-direction:column;
+background-color:violet;
+row-gap:25px;
+
+/*scroll bar*/
+height:580px;
+width: 200px;
+overflow-y: scroll;
+}
+.flex-1-1 div{
+
+  padding:7.5px;
+}
+.flex-1-1 div:hover{
+  background-color:lightblue;
+  cursor:pointer;
+}
+
+form{
+padding:40px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 25px;
+margin-bottom: auto;
+background-color: skyblue;
+
+}
+
+form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell;}
+input { display: table-cell; }
+form button{
+  margin-left: 40px;
+}
+form input{
+  width:360px;
+  height:20px;
+  /*pointer-events: none;*/
+}
+.form-1{
+  text-align:left;
+}
+
+/*form-1 hiding css*/
+.form-1{
+  display:none;
+}
+/*for displaying form-1 */
+.displayform{
+  display: block;
+}
+.div-color{
+  background-color: pink;
+}
+/*Category form design*/
+.category-form input{
+  width: 14px;
+  height: 14px;
+}
+/*Displaying category list*/
+.category-list{
+  padding: 0px;
+  display:none;
+}
+/* To display category list when the checkbox is checked*/
+.display-category{
+  display: block;
+}
+
+/*Category form hiding*/
+.Category{
+    display: none;
+}
+/*Women and fashion styles*/
+.womenndFashion p {
+    border-spacing:0px 12px;
+}
+.fashion{
+  display:none;
+}
+.display-fashion{
+  display:none;
+}
+/*stock side bar*/
+.stocks-list{
+  display:none;
+}
+.display-stocks{
+  display: block;
+}
+.stock-table{
+  border-collapse: collapse;
+}
+.stock-table td, .stock-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.stock-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.stock-table  tr:hover {background-color: #ddd;}
+
+.stock-table  th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+.stock-fashion-div{
+  display:none;
+}
+.display-stock-fashion-div{
+  display:block;
+}
+/*Track order table styles*/
+.track-order-table{
+  border-collapse: collapse;
+}
+.track-order-table td, .track-order-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.track-order-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.track-order-table  tr:hover {background-color: #ddd;}
+
+.track-order-table  th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.track-order{
+  display:none;
+}
+.display-track-order{
+  display: block;
+}
+/*track List table style*/
+.track-list-table{
+  border-collapse: collapse;
+}
+.track-list-table td, .track-order-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.track-list-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.track-list-table  tr:hover {background-color: #ddd;}
+
+.track-list-table  th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.track-list{
+  display:none;
+}
+.display-track-list{
+  display: block;
+}
+
+/*Track income styles*/
+.income-list{
+  display:none;
+}
+.display-income-list{
+  display:block;
+}
+.monthly-income-table, .yearly-income-table, .daily-income-table{
+  border-collapse: collapse;
+}
+.monthly-income-table td, .monthly-income-table th, .yearly-income-table td, .yearly-income-table th, .daily-income-table td, .daily-income-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.monthly-income-table tr:nth-child(even){background-color: #f2f2f2;}
+.yearly-income-table tr:nth-child(even){background-color: #f2f2f2;}
+.daily-income-table tr:nth-child(even){background-color: #f2f2f2;}
+.monthly-income-table tr:hover {background-color: #ddd;}
+.daily-income-table tr:hover {background-color: #ddd;}
+.yearly-income-table tr:hover {background-color: #ddd;}
+
+.monthly-income-table th,.daily-income-table th, .yearly-income-table th  {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+.track-daily-income{
+  display:none;
+}
+.track-monthly-income{
+  display:none;
+}
+.track-yearly-income{
+  display:none;
+}
+.display-track-income{
+  display:block;
+}
+
+/*Customer feedback table style*/
+.customer-feedback-table{
+  border-collapse: collapse;
+}
+.customer-feedback-table td, .customer-feedback-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.customer-feedback-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.customer-feedback-table tr:hover {background-color: #ddd;}
+
+.customer-feedback-table  th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+.customer-feedback{
+  display:none;
+}
+.display-customer-feedback{
+  display:block;
+}

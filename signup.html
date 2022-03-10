@@ -1,0 +1,119 @@
+
+<!DOCTYPE HTML>
+<head>
+  <link rel="stylesheet" type="text/css" href="signup.css"/>
+  </head>
+  <body>
+    <div class="container">
+     <img src="signup.png" class="img"/>
+    <button class="button-1" id="merchant">Sign up as Merchant</button>
+    <button class="button-1" id="customer">Sign up as Customer</button>
+    </div>
+
+<div>
+  <form class="form-1 hideButton" id="form-1" action="newdemo.php" method="post">
+    <label>First Name:</label><input type="text" name="firstName"></input>
+        <br>
+    <label>Last Name:</label><input type="text" name="lastName"></input>
+        <br>
+    <label>Store Name:</label><input type="text" name="storeName"></input>
+        <br>
+    <label>Address</label><input type="text" name="address"></input>
+        <br>
+    <label>City:</label><input type="text" name="city"></input>
+            <br>
+    <label>District:</label><input type="text" name="district"></input>
+        <br>
+    <label>State:</label><input type="text" name="state"></input>
+        <br>
+    <label>Email:</label><input type="email" naame="email"></input>
+        <br>
+    <label>Contact:</label><input type="number" name="contact"></input>
+        <br>
+    <label>Password:</label><input type="password" name="password"></input>
+        <br>
+    <label>Confirm Password:</label><input type="password" name="confirmPassword"></input>
+        <br>
+        <button type="submit" name="button-2">Sign up</button>
+    </form>
+  </div>
+
+
+<div>
+  <form class="form-2 hideButton" id="form-2" action="signup.php" method="post">
+    <label>User Id:</label><input type="text" name="userId" value="C0000"></input>
+    <br>
+    <label>First Name:</label><input type="text" name="userFirstName"</input>
+        <br>
+    <label>Last Name:</label><input type="text" name="userLastName"</input>
+        <br>
+    <label>Store Name:</label><input type="text" name="userStoreName"></input>
+        <br>
+    <label>Address</label><input type="text" name="userAddress"></input>
+        <br>
+    <label>District:</label><input type="text" name="district"></input>
+        <br>
+    <label>State:</label><input type="text" name="state"></input>
+        <br>
+    <label>Email:</label><input type="email" naame="email"></input>
+        <br>
+    <label>Contact:</label><input type="number" name="contact"></input>
+        <br>
+    <label>Password:</label><input type="password" name="password"></input>
+        <br>
+    <label>Confirm Password:</label><input type="password" name="confirmPassword"></input>
+        <br>
+        <button type="submit" name="button-2">Sign up</button>
+    </form>
+  </div>
+
+
+    <script>
+       x=document.getElementById("merchant");
+        y=document.getElementById("customer");
+        z=document.getElementById('form-2');
+        a=document.getElementById('form-1');
+      document.getElementById('merchant').onclick=function(){
+         x.className="hideButton";
+         y.className="hideButton";
+        a.className="viewThings";
+       }
+
+       document.getElementById('customer').onclick=function(){
+          x.className="hideButton";
+          y.className="hideButton";
+         z.className="viewThings";
+        }
+
+        function handleForm(event) { event.preventDefault(); }
+        form.addEventListener('submit', handleForm);
+      </script>
+<?php
+include_once 'db.php';
+$fname=$_POST['firstName'];
+$lname=$_POST['lastName'];
+$storeName=$_POST['storeName'];
+$adminEmail=$_POST['email'];
+$adminAddress=$_POST['address'];
+$city=$_POST['city'];
+$state=$_POST['state'];
+$district=$_POST['district'];
+$pin=$_POST['pin'];
+$adminMobile=$_POST['contact'];
+$password=$_POST['password'];
+$Cpassword=$_POST['confirmPassword'];
+if(isset($_POST['submit'])){
+$sql="insert into adminPersonalDetails(admin_first_name,admin_last_name,store_name,admin_email,admin_address,city,district,state,pin,mobile_number,password)values('$fname','$lname','$storeName','$adminEmail','$adminAddress','$city','$district','$state','$pin','$adminMobile','$password')";
+mysqli_query($conn, $sql);
+if($password==$Cpassword){
+  if(mysqli_query($conn, $sql)){
+    echo "Data inserted successfully";
+  }
+}
+else{
+  echo "password mismatch";
+}
+}
+?>
+
+    </body>
